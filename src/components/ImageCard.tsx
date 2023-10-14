@@ -1,6 +1,6 @@
 
 import { storage } from "@/appwrite/imageConfig ";
-import { ID } from "appwrite";
+import { NextApiRequest } from "next";
 import Image from "next/image";
 import { NextRequest, NextResponse } from "next/server";
 import { useEffect, useState } from "react";
@@ -13,7 +13,9 @@ export default function ImageCard () {
     setImageList(images.files);
   };
 
-  
+  const handleDelete = async () => {
+    await storage.deleteFile("6527afc975a7ba67ba9f","" );
+  };
 
   useEffect(() => {
     getImage();
