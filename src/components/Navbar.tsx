@@ -26,6 +26,9 @@ import Link from "next/link";
                 <li>
                     <Link href={"/sign-up"}>SignUp</Link>
                 </li>
+                <li>
+                    <Link href={"/uploadImg"}>UploadImg</Link>
+                </li>
             </ul>
     
         </nav>

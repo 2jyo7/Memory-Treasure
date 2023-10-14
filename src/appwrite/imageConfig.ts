@@ -2,11 +2,11 @@ import { Client, Storage, ID } from "appwrite";
 
 const client = new Client();
 
-const storage = new Storage(client);
+export const storage = new Storage(client);
 
 client
     .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-    .setProject(process.env.APPWRITE_PROJ_ID!) // Your project ID
+    .setProject("65241cfbe5aa3b629f83") // Your project ID
 ;
 
 export default async function ImgUpload () { 
@@ -23,3 +23,8 @@ export default async function ImgUpload () {
             console.log(error); // Failure
         });
 };
+  
+export const imageUrl = `https://https://cloud.appwrite.io/v1/storage/buckets/"6527afc975a7ba67ba9f"/files/$id/preview?project="65241cfbe5aa3b629f83"`
+
+
+   //{`/v1/storage/buckets/{"6527afc975a7ba67ba9f"}/files/{i.$id}/view`}
